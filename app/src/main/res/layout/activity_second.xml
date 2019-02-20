@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_ikeamon"
+        android:layout_width="405dp"
+        android:layout_height="399dp"
+        android:layout_below="@+id/nom_ikeamon"
+        android:layout_marginTop="2dp"
+        android:contentDescription="TODO"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/type_ikeamon"
+        android:layout_width="346dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/image_ikeamon"
+        android:layout_alignEnd="@+id/firstLine"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="246dp"
+        android:layout_toRightOf="@id/icon"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Type"
+        android:textSize="18sp"
+        android:background="@android:color/holo_blue_bright"/>
+
+    <TextView
+        android:id="@+id/nature_ikeamon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_ikeamon"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Nature"
+        android:textSize="18sp"
+        android:background="@android:color/holo_green_light"/>
+
+    <TextView
+        android:id="@+id/nom_ikeamon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Example application"
+        android:textSize="24sp" />
+
+
+
+
+</RelativeLayout>

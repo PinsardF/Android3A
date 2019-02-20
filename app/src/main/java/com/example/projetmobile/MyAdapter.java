@@ -1,8 +1,10 @@
-package com.example.projetmobile;
+//Utiliser Picasso pour gérer les images (qu'il faudra héberger, apr ex sur imgur)
 
-import java.util.ArrayList;
+package com.example.projetmobile;
 import java.util.List;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,36 +12,39 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.projetmobile.R;
-
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private List<String> values;
+    private List<Meuble> meubleList;
+    private final OnItemClickListener listener;
+
+
+    public interface OnItemClickListener {
+        void onItemClick(Meuble item);
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView txtHeader;
         public TextView txtFooter;
-        public View layout;
 
         public ViewHolder(View v) {
             super(v);
-            layout = v;
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
             txtFooter = (TextView) v.findViewById(R.id.secondLine);
         }
     }
 
-    public void add(int position, String item) {
-        values.add(position, item);
+    public void add(int position, Meuble newMeuble) {
+        meubleList.add(position, newMeuble);
         notifyItemInserted(position);
     }
 
     public void remove(int position) {
-        values.remove(position);
+        meubleList.remove(position);
         notifyItemRemoved(position);
     }
 
-    public MyAdapter(List<String> myDataset) {
-        values = myDataset;
+    public MyAdapter(List<Meuble> myDataset, OnItemClickListener listener) {
+        meubleList = myDataset;
+        this.listener = listener;
     }
 
     @Override
@@ -56,21 +61,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        final String name = values.get(position);
+        final Meuble meuble = meubleList.get(position);
+        final String name = meubleList.get(position).getNom();
+        final String desc = meubleList.get(position).getNature();
         holder.txtHeader.setText(name);
-        holder.txtHeader.setOnClickListener(new OnClickListener() {
+        holder.txtFooter.setText(desc);
+        holder.itemView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                remove(position);
+                listener.onItemClick(meuble);
             }
         });
-
-        holder.txtFooter.setText("Footer: " + name);
     }
 
     @Override
     public int getItemCount() {
-        return values.size();
+        return meubleList.size();
     }
 
 }
