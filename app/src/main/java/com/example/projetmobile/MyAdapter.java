@@ -10,7 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Meuble> meubleList;
@@ -24,11 +27,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView txtHeader;
         public TextView txtFooter;
+        public ImageView txtImage;
 
         public ViewHolder(View v) {
             super(v);
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
             txtFooter = (TextView) v.findViewById(R.id.secondLine);
+            txtImage = (ImageView) v.findViewById(R.id.icon);
         }
     }
 
@@ -64,8 +69,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         final Meuble meuble = meubleList.get(position);
         final String name = meubleList.get(position).getNom();
         final String desc = meubleList.get(position).getNature();
+        final String url = meubleList.get(position).getImageurl();
         holder.txtHeader.setText(name);
-        holder.txtFooter.setText(desc);
+        holder.txtFooter.setText("Nature : "+desc);
+        //Picasso.with(this).load(url).into(holder.txtImage);PROBLEME A RESOUDRE
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

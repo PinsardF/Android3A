@@ -23,10 +23,12 @@ public class SecondActivity extends AppCompatActivity {
         TextView name = findViewById(R.id.nom_ikeamon);
         TextView typedesc = findViewById(R.id.type_ikeamon);
         TextView naturedesc = findViewById(R.id.nature_ikeamon);
+        TextView envdesc = findViewById(R.id.env_ikeamon);
         ImageView pic = findViewById(R.id.image_ikeamon);
         name.setText(meuble.getNom());
-        typedesc.setText("Type :"+meuble.getType());
-        naturedesc.setText("Nature :"+meuble.getNature());
+        typedesc.setText("Type : "+meuble.getType());
+        naturedesc.setText("Nature : "+meuble.getNature());
+        envdesc.setText("Environnement : "+meuble.getEnv());
         Picasso.with(this).load(meuble.getImageurl()).into(pic);
     }
 }
