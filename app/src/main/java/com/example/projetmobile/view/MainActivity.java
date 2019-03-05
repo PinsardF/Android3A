@@ -1,4 +1,4 @@
-package com.example.projetmobile;
+package com.example.projetmobile.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.projetmobile.model.Meuble;
+import com.example.projetmobile.R;
+import com.example.projetmobile.controller.Controller;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new MyAdapter(input, getListener());
+        mAdapter = new MyAdapter(input, getListener(), this);
         recyclerView.setAdapter(mAdapter);
     }
 

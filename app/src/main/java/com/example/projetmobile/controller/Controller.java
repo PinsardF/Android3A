@@ -1,13 +1,15 @@
-package com.example.projetmobile;
+package com.example.projetmobile.controller;
 
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.example.projetmobile.view.MainActivity;
+import com.example.projetmobile.model.Meuble;
+import com.example.projetmobile.model.MeubleApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -59,7 +61,6 @@ public class Controller  {
     private boolean DataInDatabase() {
         return cache.contains(NOMBRE_ELEMENTS);
     }
-    //
 
     void CallAPI(MeubleApi meubleAPI){
         Call<List<Meuble>> call = meubleAPI.loadChanges();

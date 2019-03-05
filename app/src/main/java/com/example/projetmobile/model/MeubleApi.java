@@ -1,6 +1,6 @@
-package com.example.projetmobile;
+package com.example.projetmobile.model;
 
-import com.example.projetmobile.Meuble;
+import com.example.projetmobile.model.Meuble;
 
 import java.util.List;
 

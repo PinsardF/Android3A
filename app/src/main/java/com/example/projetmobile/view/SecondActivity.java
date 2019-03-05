@@ -1,10 +1,12 @@
-package com.example.projetmobile;
+package com.example.projetmobile.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.projetmobile.model.Meuble;
+import com.example.projetmobile.R;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 

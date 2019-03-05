@@ -1,10 +1,9 @@
 //Utiliser Picasso pour gérer les images (qu'il faudra héberger, apr ex sur imgur)
 
-package com.example.projetmobile;
+package com.example.projetmobile.view;
 import java.util.List;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +12,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.example.projetmobile.model.Meuble;
+import com.example.projetmobile.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Meuble> meubleList;
     private final OnItemClickListener listener;
+    private Context context;
 
 
     public interface OnItemClickListener {
@@ -47,9 +48,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         notifyItemRemoved(position);
     }
 
-    public MyAdapter(List<Meuble> myDataset, OnItemClickListener listener) {
+    public MyAdapter(List<Meuble> myDataset, OnItemClickListener listener, Context context) {
         meubleList = myDataset;
         this.listener = listener;
+        this.context = context;
     }
 
     @Override
@@ -72,7 +74,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         final String url = meubleList.get(position).getImageurl();
         holder.txtHeader.setText(name);
         holder.txtFooter.setText("Nature : "+desc);
-        //Picasso.with(this).load(url).into(holder.txtImage);PROBLEME A RESOUDRE
+        //Picasso.with(context).load(url).into(holder.txtImage);//Icones à créer
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
