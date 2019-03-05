@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String PREFS = "PREFS";
     RecyclerView recyclerView;
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager layoutManager;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
-        controller = new Controller(this);
+        controller = new Controller(this, getBaseContext().getSharedPreferences(PREFS,MODE_PRIVATE));
         controller.start();
     }
 
