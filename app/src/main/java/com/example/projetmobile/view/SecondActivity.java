@@ -1,6 +1,9 @@
 package com.example.projetmobile.view;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +18,9 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
+    private static final String INFOS = "INFOS";//ICI
     private static List<Meuble> listeMeubles;
+    public SharedPreferences cache;//ICI
     int button_state=0;
 
     @Override
@@ -42,7 +47,16 @@ public class SecondActivity extends AppCompatActivity {
         left_button.setText("Desc.");
         right_button.setText("Infos");
 
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment,new FirstFragment()).commit();
+        Bundle bundle = new Bundle();
+
+        String[] infos=new String[3];
+        infos[0]=meuble.getType();
+        infos[1]=meuble.getNature();
+        infos[2]=meuble.getEnv();
+        bundle.putStringArray("infos",infos);
+        Fragment firstFragment = new FirstFragment();
+        firstFragment.setArguments(bundle);
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment,firstFragment).commit();
 
     }
 
