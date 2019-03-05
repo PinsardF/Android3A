@@ -5,8 +5,8 @@
 
     <ImageView
         android:id="@+id/image_ikeamon"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/nom_ikeamon"
         android:layout_marginTop="2dp"
         android:layout_centerHorizontal="true"
@@ -29,7 +29,7 @@
         android:id="@+id/fragment"
         android:name="com.example.projetmobile.view.FirstFragment"
         android:layout_width="match_parent"
-        android:layout_height="298dp"
+        android:layout_height="250dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -38,7 +38,8 @@
         android:layout_marginBottom="0dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttondesc"
+        android:onClick="button_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/fragment"
@@ -50,7 +51,8 @@
         android:text="Button" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttoninfo"
+        android:onClick="button_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/fragment"
