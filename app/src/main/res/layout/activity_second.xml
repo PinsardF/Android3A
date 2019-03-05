@@ -14,40 +14,6 @@
         android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/type_ikeamon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image_ikeamon"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:singleLine="true"
-        android:text="Type"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:id="@+id/nature_ikeamon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/type_ikeamon"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Nature"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/env_ikeamon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nature_ikeamon"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Environnement"
-        android:textSize="18sp" />
-
-    <TextView
         android:id="@+id/nom_ikeamon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,7 +25,41 @@
         android:textColor="@android:color/background_dark"
         android:textSize="40sp" />
 
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:name="com.example.projetmobile.view.FirstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="298dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment"
+        android:layout_below="@+id/image_ikeamon"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment"
+        android:layout_below="@+id/image_ikeamon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="0dp"
+        android:text="Button" />
 
 
 </RelativeLayout>
