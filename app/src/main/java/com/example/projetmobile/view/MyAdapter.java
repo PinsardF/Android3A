@@ -70,10 +70,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final Meuble meuble = meubleList.get(position);
         final String name = meubleList.get(position).getNom();
-        final String desc = meubleList.get(position).getNature();
+        final String type = meubleList.get(position).getType();
+        final String desc = meubleList.get(position).getDesc();
         final String url = meubleList.get(position).getImageurl();
         holder.txtHeader.setText(name);
-        holder.txtFooter.setText("Nature : "+desc);
+        holder.txtFooter.setText("Type : "+type);
         //Picasso.with(context).load(url).into(holder.txtImage);//Icones à créer
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override

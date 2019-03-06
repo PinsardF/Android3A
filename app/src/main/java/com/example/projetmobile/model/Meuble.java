@@ -1,5 +1,7 @@
 package com.example.projetmobile.model;
 
+import android.util.EventLogTags;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -12,6 +14,7 @@ public class Meuble {
     private String type;
     private String imageurl;
     private String environnement;
+    private String description;
 
     public String getNom() {
         return nom;
@@ -32,4 +35,6 @@ public class Meuble {
     public String getEnv() {
         return environnement;
     }
+
+    public String getDesc() { return description; }
 }
