@@ -25,6 +25,7 @@ public class Controller  {
     private final String NOMBRE_ELEMENTS = "NOMBRE_ELEMENTS";
     private final String ELEMENTS = "ELEMENTS";
     SharedPreferences cache;
+    boolean reload = false;
 
     public Controller(MainActivity mainActivity, SharedPreferences sharedPreferences) {
         this.activity = mainActivity;
@@ -43,12 +44,13 @@ public class Controller  {
 
         MeubleApi meubleAPI = retrofit.create(MeubleApi.class);
 
-        if(DataInDatabase()) {
+        if(DataInDatabase() && !reload) {
             List<Meuble> listemeubles = getListFromDatabase();
             activity.showList(listemeubles);
         }
         else{
             CallAPI(meubleAPI);
+            reload = false;
         }
     }
 
@@ -79,5 +81,10 @@ public class Controller  {
                 Log.d("ERROR", "Api error");
             }
         });
+    }
+
+    public void reload() {
+        reload = true;
+        start();
     }
 }

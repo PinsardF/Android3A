@@ -1,10 +1,14 @@
 package com.example.projetmobile.view;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.projetmobile.model.Meuble;
 import com.example.projetmobile.R;
@@ -27,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+
+        Button button = findViewById(R.id.refreshbutton);
+        button.setBackgroundColor(Color.parseColor("#20b2aa"));
 
         controller = new Controller(this, getBaseContext().getSharedPreferences(PREFS,MODE_PRIVATE));
         controller.start();
@@ -51,5 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
+    }
+
+    public void refresh(View view) {
+        controller.reload();
+        Toast refreshToast = Toast.makeText(this,"Successfully refreshed !",Toast.LENGTH_SHORT);
+        refreshToast.show();
     }
 }
