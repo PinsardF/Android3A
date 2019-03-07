@@ -1,7 +1,7 @@
 # Android3A
 School Project : introduction to Android Studio
 
-IKEADEX : the Pokédex of the Ikeamons !
+IKEADEX : the Pokédex of the Ikeamons ! \n
 This application displays a list of creatures based on Ikea furnitures, the Ikeamons.
 The objectives of this project are various :
 -discovering Android Studio
