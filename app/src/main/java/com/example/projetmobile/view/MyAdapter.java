@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.projetmobile.model.Meuble;
 import com.example.projetmobile.R;
+import com.squareup.picasso.Picasso;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Meuble> meubleList;
@@ -72,10 +73,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         final String name = meubleList.get(position).getNom();
         final String type = meubleList.get(position).getType();
         final String desc = meubleList.get(position).getDesc();
-        final String url = meubleList.get(position).getImageurl();
+        final String url = meubleList.get(position).getIcon();
         holder.txtHeader.setText(name);
         holder.txtFooter.setText("Type : "+type);
-        //Picasso.with(context).load(url).into(holder.txtImage);//Icones à créer
+        Picasso.with(context).load(url).into(holder.txtImage);//Icones à créer
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

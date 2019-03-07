@@ -15,6 +15,7 @@ public class Meuble {
     private String imageurl;
     private String environnement;
     private String description;
+    private String icon;
 
     public String getNom() {
         return nom;
@@ -37,4 +38,6 @@ public class Meuble {
     }
 
     public String getDesc() { return description; }
+
+    public String getIcon() { return icon; }
 }
