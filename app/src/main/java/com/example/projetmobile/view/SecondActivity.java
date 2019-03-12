@@ -19,9 +19,6 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
-    //private static final String INFOS = "INFOS";
-    private static List<Meuble> listeMeubles;
-    //public SharedPreferences cache;//ICI
     int button_state=0;
     Fragment firstFragment;
     Fragment secondFragment;

@@ -1,5 +1,3 @@
-//Utiliser Picasso pour gérer les images (qu'il faudra héberger, apr ex sur imgur)
-
 package com.example.projetmobile.view;
 import java.util.List;
 
@@ -39,16 +37,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
     }
 
-    public void add(int position, Meuble newMeuble) {
-        meubleList.add(position, newMeuble);
-        notifyItemInserted(position);
-    }
-
-    public void remove(int position) {
-        meubleList.remove(position);
-        notifyItemRemoved(position);
-    }
-
     public MyAdapter(List<Meuble> myDataset, OnItemClickListener listener, Context context) {
         meubleList = myDataset;
         this.listener = listener;
@@ -56,9 +44,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
-        // create a new view
+    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(
                 parent.getContext());
         View v =
@@ -76,7 +62,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         final String url = meubleList.get(position).getIcon();
         holder.txtHeader.setText(name);
         holder.txtFooter.setText("Type : "+type);
-        Picasso.with(context).load(url).into(holder.txtImage);//Icones à créer
+        Picasso.with(context).load(url).into(holder.txtImage);
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -23,9 +23,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager layoutManager;
     private Controller controller;
-    private static List<Meuble> meubleList;
     private static final String mot = "AH";
-    //Test
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
