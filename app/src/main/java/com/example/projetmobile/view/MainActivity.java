@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Controller controller;
     private static List<Meuble> meubleList;
     private static final String mot = "AH";
+    //Test
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
