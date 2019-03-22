@@ -27,9 +27,9 @@ Splash Screen : Ecran d'accueil
 ![alt text](https://i.imgur.com/rewTUx4.png)
 
 Premier écran : liste des Ikeamon avec images
-![alt text](https://imgur.com/SK3pYFY)
+![alt text](https://i.imgur.com/SK3pYFY.png)
 
 Ecran secondaire : affichage d'informations sur le Ikeamon avec la Description, et les Informations
-![alt text](https://imgur.com/KytdHym)
-![alt text](https://imgur.com/bPwYsYr)
+![alt text](https://i.imgur.com/KytdHym.png)
+![alt text](https://i.imgur.com/bPwYsYr.png)
 
