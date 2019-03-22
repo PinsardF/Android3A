@@ -26,7 +26,7 @@ The objectives of this project are various :
 Splash Screen : Ecran d'accueil  
 ![alt text](https://i.imgur.com/rewTUx4.png)
 
-Premier écran : liste des Ikeamon avec images
+Premier écran : liste des Ikeamon avec images 
 ![alt text](https://i.imgur.com/SK3pYFY.png)
 
 Ecran secondaire : affichage d'informations sur le Ikeamon avec la Description, et les Informations
