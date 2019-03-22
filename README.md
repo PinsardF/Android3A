@@ -24,7 +24,7 @@ The objectives of this project are various :
 # Fonctionnalités :  
 
 Splash Screen : Ecran d'accueil  
-[img]https://i.imgur.com/rewTUx4.png[/img]
+<blockquote class="imgur-embed-pub" lang="en" data-id="rewTUx4"><a href="//imgur.com/rewTUx4">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 Premier écran : liste des Ikeamon avec images
 *afficher image*
