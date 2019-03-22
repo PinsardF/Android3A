@@ -24,7 +24,7 @@ The objectives of this project are various :
 # Fonctionnalités :  
 
 Splash Screen : Ecran d'accueil  
-[url=https://www.noelshack.com/2019-12-5-1553270960-splash.png][img]https://image.noelshack.com/minis/2019/12/5/1553270960-splash.png[/img][/url]  
+![alt text](https://www.noelshack.com/2019-12-5-1553270960-splash.png][img]https://image.noelshack.com/minis/2019/12/5/1553270960-splash.png[/img)
 
 Premier écran : liste des Ikeamon avec images
 *afficher image*
